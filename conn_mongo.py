@@ -7,6 +7,12 @@ try:
     db = con.mymongo
     collect = db.user
     print("mongoDB와 연결이 되었습니다")
+    # 데이터 삽입
+    collect.insert_one({"name": "example", "age": 30})
+    # 데이터 조회
+    result = collect.find()
+    for data in result:
+        print(data)
 
 except Exception as e:
     print("mongoDB연결 실패")
