@@ -7,8 +7,16 @@ try:
     db = con.mymongo
     collect = db.user
     print("mongoDB와 연결이 되었습니다")
-    # 데이터 삽입
-    collect.insert_one({"name": "example", "age": 30})
+    
+    #데이터 삽입1
+    #collect.insert_one({"name": "example", "age": 30})
+
+    #데이터 삽입2
+    #doc1 = {'empno':'10001', 'name':'lim', 'phone':'011-0000-0000', 'addr':'busan'}
+    #collect.insert_one(doc1)
+
+    
+
     # 데이터 조회
     result = collect.find()
     for data in result:
